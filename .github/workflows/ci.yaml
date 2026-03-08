@@ -30,6 +30,6 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             docker pull faizjs/my-vanilla-app
-            docker stop my-app || true
-            docker rm my-app || true
-            docker run -d -p 80:80 --name my-app faizjs/my-vanilla-app
+            docker stop my-vanilla-app
+            docker rm my-vanilla-app
+            docker run -d -p 80:80 --name my-vanilla-app faizjs/my-vanilla-app
